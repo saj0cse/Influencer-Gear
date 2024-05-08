@@ -11,7 +11,8 @@ body {
   font-weight: 700;
   color: rgb(58, 58, 58);
 }
-header {
+header,
+main {
   margin: 0 80px 0 80px;
 }
 .paragraph-style {
@@ -80,12 +81,67 @@ nav > ul > li > a {
   grid-gap: 10px;
 }
 
+/* main section style  */
+.main-section-box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+.popular {
+  margin-top: 100px;
+  text-align: center;
+}
+.box1 {
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  background: rgb(255, 255, 255);
+  padding: 20px;
+}
+.box1 > img {
+  width: 100%;
+}
+.box-title {
+  color: rgb(24, 25, 31);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.box-price {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.box-paragraph {
+  color: rgb(120, 120, 133);
+  font-weight: 700;
+}
+
+.box-title,
+.box-price,
+.box-paragraph {
+  margin: 5px;
+}
+.box-rating-star-div {
+  padding: 0;
+  margin: 5px;
+}
+.fa-solid {
+  margin-left: 0;
+}
+.see-more {
+  color: rgba(224, 44, 109, 0.87);
+  font-weight: 700;
+  text-align: end;
+  margin-top: 20px;
+}
+
 /* =========================================================================================== */
 
 /* media style  */
 /* for mobile style  */
 @media screen and (max-width: 576px) {
-  header {
+  header,
+  main {
     margin: 10px;
   }
 
@@ -100,16 +156,26 @@ nav > ul > li > a {
   .header-content {
     text-align: center;
   }
- 
+
   .header-sponsor-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 20px;
   }
+  .main-section-box-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 }
 
 /* for tablet device */
 @media screen and (min-width: 576px) and (max-width: 960px) {
+  header,
+  main {
+    margin: 10px;
+  }
+
   nav,
   .header-content-container {
     flex-direction: column;
@@ -120,8 +186,10 @@ nav > ul > li > a {
   .header-sponsor-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    justify-content: center;
+  }
+  .main-section-box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
